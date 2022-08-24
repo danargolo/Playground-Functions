@@ -46,7 +46,7 @@ function catAndMouse(mouse, cat1, cat2) {
     return 'cat1';
   } if (distance2 < distance1) {
     return 'cat2';
-  } return 'os gatos trombam e o rato foge'; 
+  } return 'os gatos trombam e o rato foge';
   // seu código aqui
 }
 
@@ -56,26 +56,45 @@ function fizzBuzz(arr) {
   for (let index = 0; index < arr.length; index += 1) {
     if (arr[index] % 3 === 0) {
       if (arr[index] % 5 === 0) {
-        sounds.push('fizzBuzz'); } 
+        sounds.push('fizzBuzz'); }
       else {
         sounds.push('fizz'); }
-        }
+    }
     else if (arr[index] % 5 === 0) {
       sounds.push('buzz'); }
     else {
-    sounds.push('bug!'); }      
+      sounds.push('bug!'); }
   }
- return sounds;
+  return sounds;
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
-}
-function decode() {
-  // seu código aqui
+// Referência: https://stackoverflow.com/questions/15604140/replace-multiple-strings-with-multiple-other-strings
+function encode(str) {
+  let group = {
+    a: '1',
+    e: '2',
+    i: '3',
+    o: '4',
+    u: '5',
+  };
+  return str.replace(/a|e|i|o|u/gi, function (value) {
+    return group[value];
+  });
 }
 
+function decode(str1) {
+  let groupNumber = {
+    1: 'a',
+    2: 'e',
+    3: 'i',
+    4: 'o',
+    5: 'u',
+  };
+  return str1.replace(/1|2|3|4|5/g, function (key) {
+    return groupNumber[key];
+  });
+}
 // Desafio 10
 function techList() {
   // seu código aqui
