@@ -1,9 +1,9 @@
 // Desafio 1
 function compareTrue(valor1, valor2) {
   if (valor1 && valor2 === true) {
-    return true; } {
-    return false;
+    return true;
   }
+  return false;
 }
 
 // Desafio 2
@@ -55,15 +55,13 @@ function fizzBuzz(arr) {
   let sounds = [];
   for (let index = 0; index < arr.length; index += 1) {
     if (arr[index] % 3 === 0) {
-      if (arr[index] % 5 === 0) {
-        sounds.push('fizzBuzz'); }
-      else {
-        sounds.push('fizz'); }
+      if (arr[index] % 5 === 0) { sounds.push('fizzBuzz'); }
+
+      else { sounds.push('fizz'); }
     }
-    else if (arr[index] % 5 === 0) {
-      sounds.push('buzz'); }
-    else {
-      sounds.push('bug!'); }
+    else if (arr[index] % 5 === 0) { sounds.push('buzz'); }
+
+    else { sounds.push('bug!'); }
   }
   return sounds;
 }
@@ -99,16 +97,16 @@ function decode(str1) {
 function techList(lang, user) {
   let object = [];
   let orderLang = lang.sort();
-  if (lang.length === 0){
-    return "Vazio!"
-  };
-  for (let index = 0; index < orderLang.length; index += 1) {
-    object.push( {
-      tech:orderLang[index], 
-      name:user,
-      });
+  if (lang.length === 0) {
+    return 'Vazio!';
   }
-return object;
+  for (let index = 0; index < orderLang.length; index += 1) {
+    object.push({
+      tech: orderLang[index],
+      name: user,
+    });
+  }
+  return object;
 }
 
 module.exports = {
