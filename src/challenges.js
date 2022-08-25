@@ -96,8 +96,19 @@ function decode(str1) {
   });
 }
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(lang, user) {
+  let object = [];
+  let orderLang = lang.sort();
+  if (lang.length === 0){
+    return "Vazio!"
+  };
+  for (let index = 0; index < orderLang.length; index += 1) {
+    object.push( {
+      tech:orderLang[index], 
+      name:user,
+      });
+  }
+return object;
 }
 
 module.exports = {
