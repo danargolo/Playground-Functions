@@ -34,8 +34,9 @@ function hydrate(string) {
   let arr = (string.match(/\d+/g));
   let water = 0;
 
-  for (let i in arr) { water += Number(arr[i]); }
-
+  for (let index = 0; index < arr.length; index += 1) {
+    water += Number(arr[index]);
+  }
   return water > 1 ? water + ' copos de água' : water + ' copo de água';
 }
 

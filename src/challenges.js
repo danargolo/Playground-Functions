@@ -31,7 +31,7 @@ function footballPoints(wins, ties) {
 function highestCount(values) {
   let counter = 0;
   for (let index = 0; index < values.length; index += 1) {
-    if (Math.max.apply(null, values) === values[index]) {
+    if (Math.max(...values) === values[index]) {
       counter += 1;
     }
   }
@@ -55,13 +55,15 @@ function fizzBuzz(arr) {
   let sounds = [];
   for (let index = 0; index < arr.length; index += 1) {
     if (arr[index] % 3 === 0) {
-      if (arr[index] % 5 === 0) { sounds.push('fizzBuzz'); }
+      if (arr[index] % 5 === 0) {
+        sounds.push('fizzBuzz');
 
-      else { sounds.push('fizz'); }
-    }
-    else if (arr[index] % 5 === 0) { sounds.push('buzz'); }
+      } else { sounds.push('fizz'); }
 
-    else { sounds.push('bug!'); }
+    } else if (arr[index] % 5 === 0) {
+      sounds.push('buzz');
+
+    } else { sounds.push('bug!'); }
   }
   return sounds;
 }
@@ -89,8 +91,8 @@ function decode(str1) {
     4: 'o',
     5: 'u',
   };
-  return str1.replace(/1|2|3|4|5/g, function (key) {
-    return groupNumber[key];
+  return str1.replace(/1|2|3|4|5/g, function (value2) {
+    return groupNumber[value2];
   });
 }
 // Desafio 10
