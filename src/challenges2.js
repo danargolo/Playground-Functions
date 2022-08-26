@@ -15,10 +15,18 @@ function generatePhoneNumber(arr) {
 
   return converter.replace(/(\d{2})(\d{5})(\d{4})/, '($1) $2-$3');
 }
-// Ultimo indentaçao e espaçamento dos if's
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  let arr = [lineA, lineB, lineC];
+  for (let i = 0; i < arr.length - 1; i += 1) {
+    for (let j = i + 1; j < arr.length; j += 1) {
+      let measure = arr[3 - (i + j)];
+      if (measure < (arr[i] + arr[j]) && measure > Math.abs(arr[i] - arr[j])) {
+        return true;
+      }
+      return false;
+    }
+  }
 }
 
 // Desafio 13
