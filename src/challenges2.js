@@ -38,6 +38,7 @@ function hydrate(string) {
     water += Number(arr[index]);
   }
   return water > 1 ? water + ' copos de água' : water + ' copo de água';
+   // return water > 1 ? '${water} copos de água' : '${water} copo de água';
 }
 
 module.exports = {
