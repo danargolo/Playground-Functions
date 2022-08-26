@@ -30,8 +30,13 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(string) {
+  let arr = (string.match(/\d+/g));
+  let water = 0;
+
+  for (let i in arr) { water += Number(arr[i]); }
+
+  return water > 1 ? water + ' copos de água' : water + ' copo de água';
 }
 
 module.exports = {
